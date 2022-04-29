@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "755737545736",
+    "firebase_url": "https://dnt1-75e12-default-rtdb.firebaseio.com",
+    "project_id": "dnt1-75e12",
+    "storage_bucket": "dnt1-75e12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755737545736:android:543d09fbeda64b693f15bd",
+        "android_client_info": {
+          "package_name": "com.example.DNT1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755737545736-rn92onor71s4c69gt6ce7njvgnpq6bcm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBe92wlm5-YFFPD3D3ykqELYQ_s7tn_CDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755737545736-rn92onor71s4c69gt6ce7njvgnpq6bcm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
