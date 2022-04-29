@@ -1,4 +1,4 @@
-package com.example.dnt.layout
+package com.example.dnt.layout.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -12,7 +12,7 @@ import com.example.dnt.R
 
 // writer : Yoon Jae Uk
 // date : 2022.04.28 ~ ?
-// content : 메인 액티비티 자바 코드, 'activity_main.xml' 파일과 함께 참고
+// content : 메인 액티비티 코틀린 코드, 'activity_main.xml' 파일과 함께 참고
 
 class MainActivity : AppCompatActivity() {
     /* Layout declaration begin */
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         // 레이아웃 커넥션
         layoutSetting(R.drawable.ktx_logo, 1880, "천안역", 10, 20, 30)
         mainImageFL!!.setOnClickListener(View.OnClickListener { view ->
-            val intent: Intent = Intent(applicationContext,TrainPeopleNumActivity::class.java)
+            val intent: Intent = Intent(applicationContext, TrainPeopleNumActivity::class.java)
             startActivity(intent)
         })
         //레이아웃 세팅

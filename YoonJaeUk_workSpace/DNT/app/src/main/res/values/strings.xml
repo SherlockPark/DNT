@@ -5,4 +5,5 @@
     <string name="ex_train_people_number">10/30/100</string>
     <string name="no_error_message">현재 문제가 없습니다.</string>
     <string name="error_message">무슨 문제가 발생했습니다!!</string>
+    <string name="ex_carriage_name">1호차</string>
 </resources>
