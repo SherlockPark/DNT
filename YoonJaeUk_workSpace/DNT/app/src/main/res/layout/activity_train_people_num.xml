@@ -4,7 +4,7 @@
 <!-- content : 해당 기차의 인원수를 체크하는 레이아웃이다. -->
 
 <!-- root layout -->
-<LinearLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -23,6 +23,7 @@
         android:layout_weight="8" >
         <!-- 기차 호수 -->
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tpn_UniqueNumTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ex_train_unique_number"
@@ -35,6 +36,7 @@
             app:layout_constraintLeft_toLeftOf="parent"/>
         <!-- 현재역 -->
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tpn_CurStationTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ex_current_station"
@@ -47,15 +49,12 @@
             app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- people check layout -->
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <com.example.dnt.layout.dnt_list_view.DNTListView
+        android:id="@+id/tpn_DNTLV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:weightSum="10"
-        android:layout_weight="2">
+        android:layout_weight="2"
+        android:layout_margin="10dp"/>
 
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

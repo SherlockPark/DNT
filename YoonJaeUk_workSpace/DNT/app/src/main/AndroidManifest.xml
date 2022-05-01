@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DNT">
         <activity
+            android:name=".layout.activity.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".layout.activity.TrainPeopleNumActivity"
             android:exported="false" />
         <activity
-            android:name=".layout.activity.MainActivity"
+            android:name=".layout.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

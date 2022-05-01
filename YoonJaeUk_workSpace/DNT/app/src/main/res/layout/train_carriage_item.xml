@@ -3,8 +3,9 @@
 <!-- date : 2022.04.29 ~ ? -->
 <!-- content : 기차 객차 정보를 표시하기 위한 커스텀 리스트뷰의 레이아웃이다. -->
 
-<!-- 리스트뷰 root -->
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- root layout -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -26,7 +27,7 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
     <!-- 호차별 인원수 텍스트 뷰 -->
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/item_PeopleNumberTV"
+        android:id="@+id/item_PeopleNumTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ex_train_people_number"

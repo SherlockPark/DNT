@@ -1,9 +1,13 @@
 <resources>
-    <string name="app_name">DNT_prototype</string>
+    <string name="app_name">DNT</string>
+    <!-- programmer writer string begin -->
     <string name="ex_train_unique_number">1885호</string>
     <string name="ex_current_station">대전역</string>
     <string name="ex_train_people_number">10/30/100</string>
-    <string name="no_error_message">현재 문제가 없습니다.</string>
-    <string name="error_message">무슨 문제가 발생했습니다!!</string>
+    <string name="train_no_error_message">현재 문제가 없습니다.</string>
+    <string name="train_error_message">무슨 문제가 발생했습니다!!</string>
+    <string name="train_nullException_message">예약한 인원수가 없습니다.</string>
     <string name="ex_carriage_name">1호차</string>
+    <string name="app_icon_designer">app icon designed by ???</string>
+    <!-- programmer writer string end -->
 </resources>

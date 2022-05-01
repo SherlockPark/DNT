@@ -7,8 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- programmer writer color begin -->
     <color name="red">#FF0000</color>
     <color name="blue">#0000FF</color>
     <color name="green">#00FF00</color>
     <color name="yellow">#FFD400</color>
+    <color name="DNT_representative_color">#8DCCDB</color>
+    <!-- programmer writer color end -->
 </resources>
