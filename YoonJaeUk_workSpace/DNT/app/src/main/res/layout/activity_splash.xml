@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DNT_representative_color"
-    tools:context=".layout.activity.SplashActivity">
+    tools:context="Layout.activity.SplashActivity">
 
     <!-- 현재는 텍스트 뷰이지만, 이미지뷰가 들어갈 예정이다.-->
     <!--  그리고 이 위치는 로고 위치이다. -->

@@ -13,7 +13,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".layout.activity.TrainPeopleNumActivity">
+    tools:context="Layout.activity.TrainPeopleNumActivity">
     <!-- 기차 호수와 현재역 정보 -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             app:layout_constraintRight_toRightOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!-- people check layout -->
-    <com.example.dnt.layout.dnt_list_view.DNTListView
+    <Layout.dnt_list_view.DNTListView
         android:id="@+id/tpn_DNTLV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,5 +1,7 @@
 package DNTClass
 
+import java.io.Serializable
+
 // writer : Yoon Jae Uk
 // date : 2022.04.29 ~ ?
 // content : 기차 정보를 담고있는 클래스이다.
@@ -7,14 +9,15 @@ package DNTClass
 
 class TrainInfo
     /* class, member, basic constructor(init) declaration begin */
-    (val UNIQUE_NUMBER:Int, val TYPE_ID:Int, val CARRIAGE_COUNT:Int, var currentStation:String) {
+    (val UNIQUE_NUMBER:Int, val TYPE_ID:Int, CARRIAGE_COUNT:Int, var currentStation:String,
+    CARRIAGE_MAX_NUM: Int): Serializable {
         var carriage: Array<CarriageInfo?> = arrayOfNulls(CARRIAGE_COUNT)
         val TOTAL_MAX_NUM:Int
 
         init{
             var totalNum: Int = 0
             for(item in 0 until CARRIAGE_COUNT){
-                carriage[item] = CarriageInfo(item,0,0,10)
+                carriage[item] = CarriageInfo(item,0,0,CARRIAGE_MAX_NUM)
                 totalNum += carriage[item]?.MAX_NUM!!
             }
             TOTAL_MAX_NUM = totalNum
@@ -25,14 +28,14 @@ class TrainInfo
     /* class method declaration begin */
     fun getCurNumTotal(): Int {
         var sum: Int = 0
-        for(item in 0 until CARRIAGE_COUNT)
+        for(item in 0 until carriage.size)
             sum += carriage[item]?.curNum!!
 
         return sum
     } // 현 기차의 현재 인원수 총 합계 getter function
     fun getResNumTotal(): Int {
         var sum: Int = 0
-        for(item in 0 until CARRIAGE_COUNT)
+        for(item in 0 until carriage.size)
             sum += carriage[item]?.resNum!!
 
         return sum
