@@ -1,0 +1,142 @@
+#include <SoftwareSerial.h> //시리얼 통신 라이브러리 호출
+#include <HCSR04.h>
+
+int echoPin_inner=47;
+int trigPin_inner=46;
+int echoPin_outter=10;
+int trigPin_outter=11;
+
+int blueTx=12;
+int blueRx=13;
+
+SoftwareSerial btSerial(blueTx, blueRx);  //시리얼 통신을 위한 객체 선언
+
+void setup()
+{
+  //Serial.begin(115200);
+  Serial.begin(9600);    // 시리얼 모니터
+  //===================블루투스 통신을 위한 핀모드 선언===========================
+  btSerial.begin(9600); // 블루투스 시리얼
+  //==================초음파 센서 사용을 위한 핀모드 선언==========================
+  pinMode(trigPin_outter,OUTPUT);
+  pinMode(echoPin_outter,INPUT);  
+  pinMode(trigPin_inner,OUTPUT);
+  pinMode(echoPin_inner,INPUT);
+}
+
+void loop() {
+  int now_passengers=0; //app에 전달할 제어 변수
+
+  //==============1번 초음파 센서 세팅 부분=================
+  digitalWrite(trigPin_outter, LOW);
+  digitalWrite(echoPin_outter, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin_outter,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin_outter,LOW);
+    
+  unsigned long duration_outter = pulseIn(echoPin_outter,HIGH);
+  
+  float distance_outter = ((float)(340*duration_outter)/10000)/2;
+
+//==============2번 초음파 센서 세팅 부분=================
+  digitalWrite(trigPin_inner, LOW);
+  digitalWrite(echoPin_inner, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin_inner,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin_inner,LOW);
+
+  unsigned long duration_inner = pulseIn(echoPin_inner,HIGH);
+
+   float distance_inner = ((float)(340*duration_inner)/10000)/2;
+
+
+//=========현재 측정되는 길이 출력 부분(개발자 확인용_김민국)============
+  /*
+  Serial.print("바깥쪽 센서 : ");
+  Serial.print(distance_outter);
+  Serial.print("cm\t");
+  Serial.print("안쪽 센서 : ");
+  Serial.print(distance_inner);
+  Serial.println("cm");
+  delay(500); //0.5초 마다 길이 측정을 하겠다.
+  */
+
+ //================사람이 지나간다아~~~==============
+ //======== pass 상황에 이용할 제어변수 모음 =========
+ 
+ int doorwidth_min=42; //통로폭 최소값을 42cm로 설정(test를 위해서 임시로 20cm로 줄임)
+ int pass_now=0;       //사람의 행동 양상을 최신화 해서 사용할 변수(그릇)
+ int pass_init=100;    //변수의 값을 초기화에 사용할 변수(값) 
+ int pass_entrace=110; //사람이 입장 하는 상황을 판단할 변수
+ int pass_quit=120;    //사람이 하차 하는 상황을 판단할 변수
+ 
+ int pass_outterjam=130;//사람이 줄서있다보니 바같쪽 센서만 막고 서있는 경우
+ int pass_innerjam=140; //사람이 줄서있다보니 안쪽 센서만 막고 서있는 경우
+ int pass_linejam=150; //사람이 줄서있다보니 두개의 센서를 계속막고 서있는 경우
+ 
+ static int pass_passengers=0;   //연산을 수행할 변수
+ 
+ //==================탑승 Logic=====================
+ Serial.print("0. 사람 진입여부 : ");
+ Serial.println(pass_now);  //0 이 나올거야
+ //바같쪽 센서가 짧아졌다가~~안쪽 센서가 짧아짐
+ if(distance_outter<doorwidth_min)  //통로의 길이 42cm 보다 바깥쪽 측정길이(distance_outter)가 짧아진 상황
+ {
+    pass_now=pass_entrace; //사람이 입장 한다아~~패스 상태를 바꿔라.
+    Serial.println("====================승차 한다========================");
+    Serial.print("1. 사람 진입여부 : ");
+    Serial.println(pass_now);//110이 나올거야
+    if(pass_now==pass_entrace)
+    {
+      //사람이 지나간 상황
+      pass_now=pass_init; //pass 상태의 변수를 초기화 해라. 100이 나올거야
+      pass_passengers++; //승객을 +1
+    }
+    //delay(1000); //1초 마다 길이 측정을 하겠다.
+ }
+ //==================하차 Logic=====================
+ //안쪽 센서가 짧아졌다가~~바깥쪽 센서가 짧아짐
+ //안쪽 센서가 짧아졌다가~~바같쪽 센서가 짧아짐
+ else if(distance_inner<doorwidth_min)  //통로의 길이 42cm 보다 안쪽 측정길이(distance_inner)가 짧아진 상황
+ {
+    pass_now=pass_quit; //사람이 하차 한다아~~패스 상태를 바꿔라.
+    Serial.println("====================하차 한다========================");
+    Serial.print("1. 사람 진입여부 : ");
+    Serial.println(pass_now);//120이 나올거야
+    if(pass_now==pass_quit)
+    {
+      //사람이 지나간 상황
+      pass_now=pass_init; //pass 상태의 변수를 초기화 해라. 100이 나올거야
+      pass_passengers--; //승객을 -1
+    }
+    //delay(1000); //1초 마다 길이 측정을 하겠다.
+  }
+
+  //=========사람의 출입여부를 확인하기 위한 출력 부분(개발자 확인용_김민국)============
+  /*
+  Serial.print("9.사람 진입여부 : ");
+  Serial.println(pass_now);//100이 나올거야
+  Serial.print("승차인원 : ");
+  Serial.print(pass_passengers);
+  Serial.println("명");
+  */
+  //====================블루투스 통신 기능 부분=========================
+  //==========블루투스 통신으로 현재 상황 출력부분===============
+  btSerial.print("승차 인원: ");
+  btSerial.print(pass_passengers); // 블루투스로 값을 전달하는 방법
+  btSerial.println("명");
+  
+  //==========블루투스 통신 사용을 위한 선언부분===============
+  if (btSerial.available())
+  {
+   Serial.write(btSerial.read()); //블루투스측 내용을 시리얼 모니터에 출력
+  }
+  if (Serial.available())
+  {
+   btSerial.write(Serial.read());  //시리얼 모니터 내용을 블루투스 측에 써라.
+  }
+  
+  delay(1000); //전체 시스템은 1초 마다 길이 측정을 하겠다.
+}

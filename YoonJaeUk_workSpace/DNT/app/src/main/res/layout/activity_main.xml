@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- writer : Yoon Jae Uk -->
+<!-- date : 2022.04.28 ~ ? -->
+<!-- content : 메인 액티비티 레이아웃 디자인 -->
+
+<!-- root layout -->
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".layout.activity.MainActivity">
+    <!-- logo image  -->
+    <FrameLayout
+        android:id="@+id/main_ImageFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="4">
+        <!-- 로고가 들어가는 레이아웃 -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_LogoIV"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mugunghwa_logo"
+            android:scaleType="fitCenter"/>
+        <!-- 원 마스크가 들어가는 레이아웃이긴 하나, 빠져도 무관할거 같은데,,,,,, -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_mask"
+            android:scaleType="fitXY"/>
+    </FrameLayout>
+
+    <!-- information for train layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="6">
+        <!-- 호수를 나타내는 텍스트 레이아웃 -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_UniqueNumTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ex_train_unique_number"
+            android:textSize="50sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <!-- 현재역 텍스트뷰 -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_CurrentStationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ex_current_station"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+        <!-- 인원수 텍스트뷰 -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_TrainPeopleNumTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ex_train_people_number"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <!-- 상태 메세지 -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/main_StateMessageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/train_no_error_message"
+            android:textColor="@color/blue"
+            android:textSize="30sp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
