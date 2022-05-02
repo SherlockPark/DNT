@@ -15,13 +15,17 @@ import com.example.dnt.R
 // content : DNT List 어댑터
 
 
+
 class DNTListAdapter
     /* class, member, basic constructor(init) declaration begin */
     (private val activity:Activity) : BaseAdapter() {
-    private val TAG:String = "DNTListAdapter"
+    // constructor(member) : interface
     private var arrayList:ArrayList<DNTListSample> = ArrayList<DNTListSample>()
     /*class and member init declaration end*/
 
+    /* Primitive static type declaration begin */
+    val TAG:String = "DNTListAdapter"
+    /* Primitive static type declaration end */
 
     /* class method declaration begin */
     override fun getCount(): Int {

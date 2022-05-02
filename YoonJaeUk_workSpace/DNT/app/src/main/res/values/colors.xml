@@ -13,5 +13,6 @@
     <color name="green">#00FF00</color>
     <color name="yellow">#FFD400</color>
     <color name="DNT_representative_color">#8DCCDB</color>
+    <color name="transparent">#00FF0000</color>
     <!-- programmer writer color end -->
 </resources>

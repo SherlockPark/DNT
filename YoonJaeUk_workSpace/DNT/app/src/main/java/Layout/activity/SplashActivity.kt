@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         /* onCreate() writer code begin */
         val handler: Handler = Handler(Looper.getMainLooper()) // 핸들러 선언
-        handler.postDelayed(runnable,4000) // 4초후에 넘어간다.
+        handler.postDelayed(runnable,3000) // 4초후에 넘어간다.
         /* onCreate() writer code end */
     }
 }

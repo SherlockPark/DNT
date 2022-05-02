@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable-v23/border_layout.xml" value="0.1165" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable-v23/round_layout.xml" value="0.1005" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable/border_layout.xml" value="0.1" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_train_people_num.xml" value="0.2453125" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/train_carriage_item.xml" value="0.2453125" />
         <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.235" />
         <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.235" />
         <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
