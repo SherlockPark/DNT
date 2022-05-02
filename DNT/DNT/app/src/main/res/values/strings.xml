@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DNT_prototype</string>
+    <string name="ex_train_unique_number">1885호</string>
+    <string name="ex_current_station">대전역</string>
+    <string name="ex_train_people_number">10/30/100</string>
+    <string name="no_error_message">현재 문제가 없습니다.</string>
+    <string name="error_message">무슨 문제가 발생했습니다!!</string>
+</resources>
