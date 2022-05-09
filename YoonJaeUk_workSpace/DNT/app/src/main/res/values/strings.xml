@@ -9,7 +9,7 @@
     <string name="train_nullException_message">예약한 인원수가 없습니다.</string>
     <string name="ex_carriage_name">1호차</string>
     <string name="app_icon_designer">app icon designed by YJU</string>
-    <string name="ex_arrow"><![CDATA[- - - - - - ->]]></string>
+    <string name="ex_arrow">- - - - - - -></string>
 
     <!-- programmer writer string end -->
 </resources>
