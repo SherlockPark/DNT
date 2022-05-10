@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable-v23/DNT_round_layout.xml" value="0.306" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable-v23/border_layout.xml" value="0.1165" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable-v23/round_layout.xml" value="0.1005" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable/border_layout.xml" value="0.1" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.256" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/activity_train_people_num.xml" value="0.2453125" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT/app/src/main/res/layout/train_carriage_item.xml" value="0.2453125" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT_bluetooth/app/src/main/res/layout/activity_main.xml" value="0.3015625" />
+        <entry key="..\:/Users/COMPUTER/Desktop/DNT_bluetooth/app/src/main/res/layout/activity_splash.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.235" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.235" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/layout/activity_train_people_num.xml" value="0.18125" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/layout/train_carriage_item.xml" value="0.12454710144927536" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.235" />
+        <entry key="..\:/Users/Guneo/Desktop/YoonJaeUk_workSpace/DNT/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.19" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="true" project-jdk-name="13" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
